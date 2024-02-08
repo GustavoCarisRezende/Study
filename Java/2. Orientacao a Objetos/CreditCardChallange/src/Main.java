@@ -8,14 +8,13 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        Purchase purchase = new Purchase();
+        var nextPurchase = 1;
 
         System.out.println("Desafio: aplicação de compras.");
-
         System.out.print("Informe o limite do cartão de crédito: ");
         CreditCard creditCard = new CreditCard(scanner.nextDouble());
-        Purchase purchase = new Purchase();
 
-        var nextPurchase = 1;
         while(nextPurchase == 1) {
             System.out.print("Digite a descrição da compra: ");
             var productName = scanner.next();
@@ -23,14 +22,21 @@ public class Main {
             System.out.print("Digite o valor da compra: ");
             var productPrice = scanner.nextDouble();
 
-            purchase.addProduct(new Product(productName, productPrice));
+            if(purchase.computeTotalPurchaseValue() + productPrice > creditCard.getLimit()) {
+                System.out.println("Saldo insuficiente!");
+                nextPurchase = 0;
+            } else {
+                purchase.addProduct(new Product(productName, productPrice));
 
-            System.out.print("""
+                System.out.print("""
                     Compra realizada!
                     Digite 0 para sair ou 1 para continuar
                     -> """);
 
-            nextPurchase = scanner.nextInt();
+                nextPurchase = scanner.nextInt();
+            }
         }
+        purchase.getPurchaseDetails();
+        System.out.println("Saldo do cartão: " + (creditCard.getLimit() - purchase.computeTotalPurchaseValue()));
     }
 }
