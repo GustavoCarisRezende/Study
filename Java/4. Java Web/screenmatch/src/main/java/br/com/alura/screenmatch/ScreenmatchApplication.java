@@ -1,18 +1,10 @@
 package br.com.alura.screenmatch;
 
-import br.com.alura.screenmatch.model.DadosEpisodio;
-import br.com.alura.screenmatch.model.DadosSerie;
-import br.com.alura.screenmatch.model.DadosTemporada;
 import br.com.alura.screenmatch.principal.Principal;
-import br.com.alura.screenmatch.service.ConsumoApiService;
-import br.com.alura.screenmatch.service.ConverteDadosService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.ArrayList;
-import java.util.List;
-
+ 
 @SpringBootApplication
 public class ScreenmatchApplication implements CommandLineRunner {
 

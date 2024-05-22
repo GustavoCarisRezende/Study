@@ -15,7 +15,7 @@ public class Principal {
     private final Scanner scanner = new Scanner(System.in);
     private final String BASEURL = "https://www.omdbapi.com/";
     private final String APIKEY = "&apikey=db719a40";
-    private ConsumoApiService consumoApiService = new ConsumoApiService();
+        private ConsumoApiService consumoApiService = new ConsumoApiService();
     private ConverteDadosService conversor = new ConverteDadosService();
 
     public void exibeMenu() {
