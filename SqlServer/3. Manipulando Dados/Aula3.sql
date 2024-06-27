@@ -140,3 +140,38 @@ INSERT INTO tbVendedores
 VALUES ('239', 'Maria Joana', 'Copacabana', 0.2, '2015-01-01', 1);
 
 ROLLBACK
+
+
+CREATE TABLE tbCheck (
+    id INT NOT NULL,
+    nome VARCHAR(50),
+    idade INT NULL,
+    cidade VARCHAR(50),
+    CONSTRAINT chkIdade CHECK(idade >= 18)
+)
+
+INSERT INTO tbCheck VALUES(1, 'Teste 1', 18, 'São Paulo')
+
+INSERT INTO tbCheck VALUES(2, 'Teste 2', 17, 'São Paulo')
+
+INSERT INTO tbCheck VALUES(3, 'Teste 3', 20, 'São Paulo')
+
+
+CREATE TABLE tbCheck2 (
+    id INT NOT NULL,
+    nome VARCHAR(50),
+    idade INT NULL,
+    cidade VARCHAR(50),
+    CONSTRAINT chkIdade2 CHECK((idade >= 18  AND cidade = 'Rio de Janeiro') OR (idade >= 16 AND cidade = 'São Paulo'))
+)
+
+
+INSERT INTO tbCheck2 VALUES(1, 'Teste 1', 19, 'São Paulo')
+
+INSERT INTO tbCheck2 VALUES(2, 'Teste 2', 17, 'São Paulo')
+
+INSERT INTO tbCheck2 VALUES(3, 'Teste 3', 18, 'Rio de Janeiro')
+
+INSERT INTO tbCheck2 VALUES(4, 'Teste 4', 15, 'Rio de Janeiro')
+
+
