@@ -13,9 +13,3 @@ tags:
 - [x] Parar sequências (Stop Sequences)
 
 ---
-
-## Referências Externas
-- [Referência X](https://google.com)
-- [Referência Y](https://google.com)
-
----

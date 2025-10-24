@@ -13,9 +13,3 @@ tags:
 - [x] Punição por penalização (Presence Penalty)
 
 ---
-
-## Referências Externas
-- [Referência X](https://google.com)
-- [Referência Y](https://google.com)
-
----

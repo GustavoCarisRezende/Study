@@ -25,9 +25,3 @@ tags:
 - [ ] Delimite seções diferentes com crases triplas ou tags XML.
 
 ---
-
-## Referências Externas
-- [Referência X](https://google.com)
-- [Referência Y](https://google.com)
-
----

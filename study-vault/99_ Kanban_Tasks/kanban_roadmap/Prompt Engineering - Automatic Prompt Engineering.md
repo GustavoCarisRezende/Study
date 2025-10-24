@@ -13,9 +13,3 @@ tags:
 - [x] Evaluating them using metrics (BLEU or ROUGE)
 
 ---
-
-## Referências Externas
-- [Referência X](https://google.com)
-- [Referência Y](https://google.com)
-
----
